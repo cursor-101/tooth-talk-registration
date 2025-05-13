@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooth Talk - About Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-container">
+                <!-- Logo SVGs will be combined in CSS for simplicity -->
+                <div class="logo-image"></div>
+                <div class="logo-text"></div>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-item active">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn btn-login">Login</button>
+            <a href="register.html" class="btn btn-register">Register</a>
+        </div>
+    </header>
+
+    <main class="main-content about-page">
+        <section class="about-section">
+            <h1>About Tooth Talk</h1>
+            <p class="subtitle">A Community of Dental Professionals</p>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-inner"></div>
+                </div>
+                
+                <div class="about-text">
+                    <h2>What is Tooth Talk?</h2>
+                    <p>Tooth Talk is a casual meetup event designed specifically for dental professionals to connect, share knowledge, and build a supportive community.</p>
+                    
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to create an environment where dental practitioners can come together in a relaxed setting to discuss industry trends, share challenges, and build lasting professional relationships.</p>
+                    
+                    <h2>Join the Community</h2>
+                    <p>Whether you're a seasoned dentist, a recent graduate, or a specialist in the field, Tooth Talk welcomes you to join our growing community of passionate dental professionals.</p>
+                    
+                    <a href="register.html" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="event-details">
+            <h2>Upcoming Event</h2>
+            <div class="event-card">
+                <div class="event-date">
+                    <div class="date-inner">
+                        <span class="day">20</span>
+                        <span class="month">March</span>
+                    </div>
+                </div>
+                <div class="event-info">
+                    <h3>World Oral Health Day 2022!</h3>
+                    <p class="event-location">Dental Center Conference Hall, 123 Dental Street</p>
+                    <p class="event-time">10:00 AM - 4:00 PM</p>
+                    <p class="event-description">Join us for a day of insightful presentations, networking, and discussions about the latest advancements in dental care. Special focus on preventive dentistry and patient education.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
+                <div class="form-footer">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

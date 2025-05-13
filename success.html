@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooth Talk - Registration Successful</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-container">
+                <!-- Logo SVGs will be combined in CSS for simplicity -->
+                <div class="logo-image"></div>
+                <div class="logo-text"></div>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn btn-login">Login</button>
+            <a href="register.html" class="btn btn-register">Register</a>
+        </div>
+    </header>
+
+    <main class="main-content success-page">
+        <div class="success-header">
+            <h2>Thank you for registering to</h2>
+            <h1>Tooth Talk Meetup!</h1>
+        </div>
+        
+        <p class="success-subheader">Please find your ticket below.</p>
+        
+        <div class="ticket-container">
+            <div class="ticket-pattern-top"></div>
+            <div class="ticket-content">
+                <div class="ticket-logo">
+                    <div class="logo-container">
+                        <div class="logo-image"></div>
+                        <div class="logo-text"></div>
+                    </div>
+                </div>
+                
+                <h2 class="event-title">World Oral Health Day 2022!</h2>
+                
+                <div class="partner-logos">
+                    <div class="partner-logo small"></div>
+                    <div class="partner-logo small"></div>
+                    <div class="partner-logo small"></div>
+                    <div class="partner-logo small"></div>
+                </div>
+                
+                <div class="ticket-pin">
+                    <p>Your pin code is</p>
+                    <div class="pin-code">65456548</div>
+                </div>
+            </div>
+            <div class="ticket-pattern-bottom"></div>
+        </div>
+        
+        <div class="action-buttons">
+            <button class="btn btn-primary">Download Ticket</button>
+            <button class="btn btn-secondary">Share Ticket</button>
+        </div>
+        
+        <div class="social-share">
+            <p>Share with your friends:</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon facebook"></a>
+                <a href="#" class="social-icon twitter"></a>
+                <a href="#" class="social-icon whatsapp"></a>
+                <a href="#" class="social-icon email"></a>
+            </div>
+        </div>
+    </main>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
+                <div class="form-footer">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

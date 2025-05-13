@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooth Talk - Verification</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-container">
+                <!-- Logo SVGs will be combined in CSS for simplicity -->
+                <div class="logo-image"></div>
+                <div class="logo-text"></div>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn btn-login">Login</button>
+            <a href="register.html" class="btn btn-register active">Register</a>
+        </div>
+    </header>
+
+    <main class="main-content registration-page">
+        <div class="registration-header">
+            <h1>Register Now!</h1>
+            <p>to be a part of the event.</p>
+        </div>
+        
+        <h2 class="form-title">Verify it's you</h2>
+        <p class="form-subtitle">Fill the information carefully</p>
+        
+        <section class="verification-container">
+            <h3>Enter verification code</h3>
+            <p>A verification code has been sent to your mobile number and email</p>
+            
+            <div class="verification-code-container">
+                <input type="text" class="verification-code-input" maxlength="1" autofocus>
+                <input type="text" class="verification-code-input" maxlength="1">
+                <input type="text" class="verification-code-input" maxlength="1">
+                <input type="text" class="verification-code-input" maxlength="1">
+                <input type="text" class="verification-code-input" maxlength="1">
+                <input type="text" class="verification-code-input" maxlength="1">
+                <input type="text" class="verification-code-input" maxlength="1">
+                <input type="text" class="verification-code-input" maxlength="1">
+            </div>
+            
+            <button type="button" onclick="location.href='success.html'" class="btn btn-submit">Verify</button>
+            
+            <div class="resend-code">
+                <p>Didn't receive the code? <a href="#" id="resendLink">Resend</a></p>
+                <p id="resendTimer">Resend code in <span id="timer">60</span> seconds</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
+                <div class="form-footer">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Handle verification code input behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('.verification-code-input');
+            
+            inputs.forEach((input, index) => {
+                // Auto-move to next input after entering a digit
+                input.addEventListener('input', function() {
+                    if (this.value.length === 1) {
+                        if (index < inputs.length - 1) {
+                            inputs[index + 1].focus();
+                        }
+                    }
+                });
+                
+                // Handle backspace to go to previous input
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && this.value === '' && index > 0) {
+                        inputs[index - 1].focus();
+                    }
+                });
+            });
+            
+            // Countdown timer for resend code
+            let timerCount = 60;
+            const timerDisplay = document.getElementById('timer');
+            const timerInterval = setInterval(() => {
+                timerCount--;
+                timerDisplay.textContent = timerCount;
+                
+                if (timerCount <= 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('resendTimer').style.display = 'none';
+                    document.getElementById('resendLink').classList.add('active');
+                }
+            }, 1000);
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

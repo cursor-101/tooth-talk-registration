@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooth Talk - Registration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-container">
+                <!-- Logo SVGs will be combined in CSS for simplicity -->
+                <div class="logo-image"></div>
+                <div class="logo-text"></div>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn btn-login">Login</button>
+            <a href="register.html" class="btn btn-register active">Register</a>
+        </div>
+    </header>
+
+    <main class="main-content registration-page">
+        <div class="registration-header">
+            <h1>Register Now!</h1>
+            <p>to be a part of the event.</p>
+        </div>
+        
+        <h2 class="form-title">Personal Information</h2>
+        <p class="form-subtitle">Fill the information carefully</p>
+        
+        <section class="registration-form-container">
+            <div class="form-header">
+                <h1>Registration</h1>
+                <p>Join Tooth Talk community today</p>
+            </div>
+            <form id="registrationForm" class="registration-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" required>
+                </div>
+                <div class="form-group">
+                    <label for="registrationCode">TT Registration Code</label>
+                    <input type="text" id="registrationCode" name="registrationCode" placeholder="Enter registration code">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    <p class="password-hint">Password must be at least 8 characters</p>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" id="termsAgree" name="termsAgree" required>
+                    <label for="termsAgree">I agree to the <a href="#">Terms and Conditions</a></label>
+                </div>
+                <button type="button" onclick="location.href='registration-chamber.html'" class="btn btn-submit">Next</button>
+            </form>
+            <div class="form-footer">
+                <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
+            </div>
+        </section>
+    </main>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
+                <div class="form-footer">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

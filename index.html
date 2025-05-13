@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tooth Talk - Registration</title>
+    <title>Tooth Talk - Dental Professionals Community</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -19,51 +19,53 @@
         <nav class="navigation">
             <div class="nav-links">
                 <div class="nav-item active">
-                    <a href="#">Home</a>
+                    <a href="index.html">Home</a>
                 </div>
                 <div class="nav-item">
-                    <a href="#">About</a>
+                    <a href="about.html">About</a>
                 </div>
             </div>
         </nav>
         <div class="auth-buttons">
             <button class="btn btn-login">Login</button>
-            <button class="btn btn-register">Register</button>
+            <a href="register.html" class="btn btn-register">Register</a>
         </div>
     </header>
 
     <main class="main-content">
-        <section class="registration-form-container">
-            <div class="form-header">
-                <h1>Registration</h1>
-                <p>Join Tooth Talk community today</p>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Tooth Talk:<br>A Casual Meetup for Dental Professionals</h1>
+                    <p>Please register to be a part of the event.</p>
+                    <a href="register.html" class="btn btn-register btn-lg">Register Now</a>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-circles-container">
+                        <div class="hero-circles"></div>
+                        <div class="hero-circles-inner"></div>
+                        <div class="hero-circles-outer"></div>
+                        <div class="hero-circles-outer-2"></div>
+                    </div>
+                    <div class="tooth-icon"></div>
+                    <div class="tooth-icon-2"></div>
+                </div>
             </div>
-            <form id="registrationForm" class="registration-form">
-                <div class="form-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+        </section>
+
+        <section class="partners">
+            <div class="section-header">
+                <h2>Our Partner in Promoting Oral Health</h2>
+            </div>
+            <div class="partners-logos">
+                <div class="partners-row">
+                    <div class="partner-logo"></div>
+                    <div class="partner-logo"></div>
+                    <div class="partner-logo"></div>
+                    <div class="partner-logo"></div>
+                    <div class="partner-logo"></div>
+                    <div class="partner-logo"></div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Create a password" required>
-                    <p class="password-hint">Password must be at least 8 characters</p>
-                </div>
-                <div class="form-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
-                </div>
-                <div class="form-checkbox">
-                    <input type="checkbox" id="termsAgree" name="termsAgree" required>
-                    <label for="termsAgree">I agree to the <a href="#">Terms and Conditions</a></label>
-                </div>
-                <button type="submit" class="btn btn-submit">Create Account</button>
-            </form>
-            <div class="form-footer">
-                <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
             </div>
         </section>
     </main>
